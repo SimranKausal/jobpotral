@@ -43,7 +43,8 @@ const Signup = () => {
         if (input.file) {
             formData.append("file", input.file);
         }
-
+        console.log("Data received");
+        console.log("fullname", input.fullname);
         try {
             dispatch(setLoading(true));
             const res = await axios.post(`${USER_API_END_POINT}/register`, formData, {

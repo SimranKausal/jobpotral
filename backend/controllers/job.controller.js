@@ -4,14 +4,16 @@ import { Job } from "../models/job.model.js";
 export const postJob = async (req, res) => {
     try {
         const { title, description, requirements, salary, location, jobType, experience, position, companyId } = req.body;
-        const userId = req.id;
-
-        if (!title || !description || !requirements || !salary || !location || !jobType || !experience || !position || !companyId) {
+        const userId = req.id; 
+        
+        
+        if (!title || !description || !requirements || !salary || !location || !jobType || !experience || !position || !companyId ) {
             return res.status(400).json({
-                message: "Somethin is missing.",
+                message: "Something is missing.",
                 success: false
-            })
-        };
+            });
+        }
+
         const job = await Job.create({
             title,
             description,
@@ -19,7 +21,7 @@ export const postJob = async (req, res) => {
             salary: Number(salary),
             location,
             jobType,
-            experienceLevel: experience,
+            experience,
             position,
             company: companyId,
             created_by: userId
@@ -31,6 +33,11 @@ export const postJob = async (req, res) => {
         });
     } catch (error) {
         console.log(error);
+        return res.status(500).json({
+            message: "Error creating job",
+            success: false,
+            error: error.message
+        });
     }
 }
 // student k liye
