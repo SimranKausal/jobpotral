@@ -1,5 +1,4 @@
 import React from 'react';
-// import { FaBriefcase, FaUsers, FaHandshake, FaSearch } from 'react-icons/fa';
 import Navbar from '../components/shared/Navbar';
 const About = () => {
   return (
