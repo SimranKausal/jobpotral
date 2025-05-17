@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBriefcase, FaUsers, FaHandshake, FaSearch } from 'react-icons/fa';
+// import { FaBriefcase, FaUsers, FaHandshake, FaSearch } from 'react-icons/fa';
 import Navbar from '../components/shared/Navbar';
 const About = () => {
   return (
@@ -20,22 +20,22 @@ const About = () => {
       {/* Features Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         <FeatureCard 
-          icon={<FaBriefcase className="h-8 w-8" />}
+          // icon={<FaBriefcase className="h-8 w-8" />}
           title="Job Listings"
           description="Access thousands of curated job opportunities from top companies across various industries."
         />
         <FeatureCard 
-          icon={<FaUsers className="h-8 w-8" />}
+          // icon={<FaUsers className="h-8 w-8" />}
           title="For Employers"
           description="Post jobs, manage applications, and find the perfect candidates for your organization."
         />
         <FeatureCard 
-          icon={<FaSearch className="h-8 w-8" />}
+          // icon={<FaSearch className="h-8 w-8" />}
           title="Smart Search"
           description="Advanced search and filtering options to help you find exactly what you're looking for."
         />
         <FeatureCard 
-          icon={<FaHandshake className="h-8 w-8" />}
+          // icon={<FaHandshake className="h-8 w-8" />}
           title="Career Growth"
           description="Resources and tools to help professionals advance in their careers."
         />
